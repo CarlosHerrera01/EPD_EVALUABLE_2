@@ -100,7 +100,7 @@ function llenarTabla_oeste() {
 
 function alerta() {
     var mensaje;
-    var opcion = confirm("Desea reiniciar?");
+    var opcion = confirm("¿Desea reiniciar?");
     if (opcion == true) {
         document.getElementById('base_lebron').textContent = "";
         document.getElementById('base_giannis').textContent = "";
