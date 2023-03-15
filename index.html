@@ -25,209 +25,212 @@
       font-family: Cinzel, serif;
     }
   </style>
-  <div id="background" class="bg-image shadow-2-strong">
-    <header>
+  <div class="container-fluid">
+    <div id="background" class="bg-image shadow-2-strong">
+      <header>
+        <div class="row">
+        <div class="col-6">
+          <h1 class=" display-3 col align-top text-center text-black">Bienvenido al simulador All-Star 2023</h1>
+        </div>
+          <div class="col-6 mt-3 mb-3">
+            <nav class="navbar navbar-expand-xxl navbar-expand-lg navbar-expand-xl bg-light border border-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <button type="button" class="btn btn-outline-dark">All Star 2023 <span class="badge text-bg-secondary">(Here)</span></button>
+                </a>
+                <a class="navbar-brand" href="conferencia_este.html">
+                  <button type="button" class="btn btn-outline-primary">Conferencia Este</button>
+                </a>
+                <a class="navbar-brand" href="conferencia_oeste.html">
+                  <button type="button" class="btn btn-outline-danger">Conferencia Oeste</button>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        
+  
+        <div class="row">
+          <div class="col-6">
+            
+            <img class="align-center w-100 mt-3 mb-3" src="./img/AllStar_Utah_small.png">
+          </div>
+  
+          <div class="col-6">
+            <img class="align-center w-100 mt-3 mb-3" src="./img/kjames.gif">
+          </div>
+  
+        </div>
+        <div id="background_navbar" class="bg-image shadow-2-strong">
+  
+        </div>
+  
+  
+      </header>
+  
       <div class="row">
-      <div class="col-6">
-        <h1 class=" display-3 col align-top text-center text-black">Bienvenido al simulador All-Star 2023</h1>
-      </div>
-        <div class="col-6 mt-3 mb-3">
-          <nav class="navbar navbar-expand-xxl bg-light border border-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <button type="button" class="btn btn-outline-dark">All Star 2023 <span class="badge text-bg-secondary">(Here)</span></button>
-              </a>
-              <a class="navbar-brand" href="conferencia_este.html">
-                <button type="button" class="btn btn-outline-primary">Conferencia Este</button>
-              </a>
-              <a class="navbar-brand" href="conferencia_oeste.html">
-                <button type="button" class="btn btn-outline-danger">Conferencia Oeste</button>
-              </a>
+        <div class="col-9">
+          <table id="draft-table" class="table bg-dark-subtle border-3 m-4">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <h2 class="text-black text-center">POSICIÓN</h2>
+                </th>
+                <th scope="col">
+                  <h2 class="text-black text-center">TEAM LEBRON</h2>
+                </th>
+                <th scope="col">
+                  <h2 class="text-black text-center">TEAM GIANNIS</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <h3 class="text-black text-center">Base</h3>
+                </th>
+                <td>
+                  <h4 id="base_lebron" class="text-center text-black"></h4>
+                </td>
+                <td>
+                  <h4 id="base_giannis"class="text-center text-black"></h4>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h3 class="text-black text-center">Escolta</h3>
+                </th>
+                <td>
+                  <h4 id="escolta_lebron" class="text-center text-black"></h4>
+                </td>
+                <td>
+                  <h4 id="escolta_giannis" class="text-center text-black"></h4>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h3 class="text-black text-center">Alero</h3>
+                </th>
+                <td>
+                  <h4 id="alero_lebron" class="text-center text-black"></h4>
+                </td>
+                <td>
+                  <h4 id="alero_giannis" class="text-center text-black"></h4>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h3 class="text-black text-center">Ala Pivot</h3>
+                </th>
+                <td>
+                  <h4 id="ala_lebron" class="text-center text-black"></h4>
+                </td>
+                <td>
+                  <h4 id="ala_giannis" class="text-center text-black"></h4>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h3 class="text-black text-center">Pivot</h3>
+                </th>
+                <td>
+                  <h4 id="pivot_lebron" class="text-center text-black"></h4>
+                </td>
+                <td>
+                  <h4 id="pivot_giannis" class="text-center text-black"></h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+  
+        <div class="col-3">
+          <form class="row mt-5 bg-transparent pb-4 mx-4">
+            <div class="col-6">
+              <select id="este" class="form-select" aria-label="Default select example" onchange="llenarTabla_este()">
+                <option selected>Conferencia Este</option>
+                <option value="Jaylen Brown">Jaylen Brown</option>
+                <option value="Tyrese Haliburton">Tyrese Haliburton</option>
+                <option value="Julius Randle">Julius Randle</option>
+                <option value="Joel Embiid">Joel Embiid</option>
+                <option value="Nikola Jokic">Nikola Jokic</option>
+                <option value="Jrue Holiday">Jrue Holiday</option>
+                <option value="DeMar DeRozan">DeMar DeRozan</option>
+                <option value="Pascal Siakam">Pascal Siakam</option>
+                <option value="Bam Adebayo">Bam Adebayo</option>
+                <option value="Jayson Tatum">Jayson Tatum</option>
+                <option value="Donovan Mitchell">Donovan Mitchell</option>
+                <option value="Lauri Markkanen">Lauri Markkanen</option>
+              </select>
+  
             </div>
-          </nav>
+            <div class="col-6">
+              <select id="oeste" class="form-select" aria-label="Default select example" onchange="llenarTabla_oeste()">
+                <option selected>Conferencia Oeste</option>
+                <option value="Anthony Edwards">Anthony Edwards</option>
+                <option value="Paul George">Paul George</option>
+                <option value="De'Aaron Fox">De'Aaron Fox</option>
+                <option value="Domantas Sabonis">Domantas Sabonis</option>
+                <option value="Jaren Jackson Jr">Jaren Jackson Jr</option>
+                <option value="Kyrie Irving">Kyrie Irving</option>
+                <option value="Luka Doncic">Luka Doncic</option>
+                <option value="Damian Lillard">Damian Lillard</option>
+                <option value="Shai Gilgeous-Alexander">Shai Gilgeous-Alexander</option>
+                <option value="Ja Morant">Ja Morant</option>
+              </select>
+            </div>
+  
+          </form>
         </div>
-      </div>
-      
-
-      <div class="row">
-        <div class="col-6">
-          
-          <img class="align-center w-100 mt-3 mb-3" src="./img/AllStar_Utah_small.png">
-        </div>
-
-        <div class="col-6">
-          <img class="align-center w-100 mt-3 mb-3" src="./img/kjames.gif">
-        </div>
-
-      </div>
-      <div id="background_navbar" class="bg-image shadow-2-strong">
-
-      </div>
-
-
-    </header>
-
-    <div class="row">
-      <div class="col-9">
-        <table id="draft-table" class="table bg-dark-subtle border-3 m-4">
-          <thead>
-            <tr>
-              <th scope="col">
-                <h2 class="text-black text-center">POSICIÓN</h2>
-              </th>
-              <th scope="col">
-                <h2 class="text-black text-center">TEAM LEBRON</h2>
-              </th>
-              <th scope="col">
-                <h2 class="text-black text-center">TEAM GIANNIS</h2>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <h3 class="text-black text-center">Base</h3>
-              </th>
-              <td>
-                <h4 id="base_lebron" class="text-center text-black"></h4>
-              </td>
-              <td>
-                <h4 id="base_giannis"class="text-center text-black"></h4>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <h3 class="text-black text-center">Escolta</h3>
-              </th>
-              <td>
-                <h4 id="escolta_lebron" class="text-center text-black"></h4>
-              </td>
-              <td>
-                <h4 id="escolta_giannis" class="text-center text-black"></h4>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <h3 class="text-black text-center">Alero</h3>
-              </th>
-              <td>
-                <h4 id="alero_lebron" class="text-center text-black"></h4>
-              </td>
-              <td>
-                <h4 id="alero_giannis" class="text-center text-black"></h4>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <h3 class="text-black text-center">Ala Pivot</h3>
-              </th>
-              <td>
-                <h4 id="ala_lebron" class="text-center text-black"></h4>
-              </td>
-              <td>
-                <h4 id="ala_giannis" class="text-center text-black"></h4>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <h3 class="text-black text-center">Pivot</h3>
-              </th>
-              <td>
-                <h4 id="pivot_lebron" class="text-center text-black"></h4>
-              </td>
-              <td>
-                <h4 id="pivot_giannis" class="text-center text-black"></h4>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-      <div class="col-3">
-        <form class="row mt-5 bg-transparent pb-4 mx-4">
-          <div class="col-6">
-            <select id="este" class="form-select" aria-label="Default select example" onchange="llenarTabla_este()">
-              <option selected>Conferencia Este</option>
-              <option value="Jaylen Brown">Jaylen Brown</option>
-              <option value="Tyrese Haliburton">Tyrese Haliburton</option>
-              <option value="Julius Randle">Julius Randle</option>
-              <option value="Joel Embiid">Joel Embiid</option>
-              <option value="Nikola Jokic">Nikola Jokic</option>
-              <option value="Jrue Holiday">Jrue Holiday</option>
-              <option value="DeMar DeRozan">DeMar DeRozan</option>
-              <option value="Pascal Siakam">Pascal Siakam</option>
-              <option value="Bam Adebayo">Bam Adebayo</option>
-              <option value="Jayson Tatum">Jayson Tatum</option>
-              <option value="Donovan Mitchell">Donovan Mitchell</option>
-              <option value="Lauri Markkanen">Lauri Markkanen</option>
-            </select>
-
-          </div>
-          <div class="col-6">
-            <select id="oeste" class="form-select" aria-label="Default select example" onchange="llenarTabla_oeste()">
-              <option selected>Conferencia Oeste</option>
-              <option value="Anthony Edwards">Anthony Edwards</option>
-              <option value="Paul George">Paul George</option>
-              <option value="De'Aaron Fox">De'Aaron Fox</option>
-              <option value="Domantas Sabonis">Domantas Sabonis</option>
-              <option value="Jaren Jackson Jr">Jaren Jackson Jr</option>
-              <option value="Kyrie Irving">Kyrie Irving</option>
-              <option value="Luka Doncic">Luka Doncic</option>
-              <option value="Damian Lillard">Damian Lillard</option>
-              <option value="Shai Gilgeous-Alexander">Shai Gilgeous-Alexander</option>
-              <option value="Ja Morant">Ja Morant</option>
-            </select>
-          </div>
-
-        </form>
       </div>
     </div>
-  </div>
-  
-<footer class="bg-dark text-center text-white">
-  
-  <div class="container p-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/caarlosherreera/" role="button"><span class="badge text-bg-light">Instagram</span>
-        <i class="fab fa-instagram"></i>
-      </a>
-
-      
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/carlos-herrera-ba9721211/" role="button"><span class="badge text-bg-light">Linkedin</span>
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-
-      
-      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/CarlosHerrera01" role="button"> <span class="badge text-bg-light">Github</span>
-        <i class="fab fa-github"></i>
-      </a>
-    </section>
     
-
+  <footer class="bg-dark text-center text-white">
+    
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/caarlosherreera/" role="button"><span class="badge text-bg-light">Instagram</span>
+          <i class="fab fa-instagram"></i>
+        </a>
   
-
-
-    <section class="mb-4">
-      <p>
-        Sitio web creado con un fin educativo para explorar las funcionalidades ofrecidas por Boostrap 5 con la temática del reciente All-Star de la NBA 
-        en el que se encuentra un simulador de elección de los equipos con los jugadores elegidos para este evento. Para más información sobre cada uno de
-        los jugadores se puede navegar por los links de "Conferencia Este" y "Conferencia Oeste" dónde aparecen todos ellos.
-      </p>
-    </section>
+        
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/carlos-herrera-ba9721211/" role="button"><span class="badge text-bg-light">Linkedin</span>
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+  
+        
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/CarlosHerrera01" role="button"> <span class="badge text-bg-light">Github</span>
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+      
+  
+    
+  
+  
+      <section class="mb-4">
+        <p>
+          Sitio web creado con un fin educativo para explorar las funcionalidades ofrecidas por Boostrap 5 con la temática del reciente All-Star de la NBA 
+          en el que se encuentra un simulador de elección de los equipos con los jugadores elegidos para este evento. Para más información sobre cada uno de
+          los jugadores se puede navegar por los links de "Conferencia Este" y "Conferencia Oeste" dónde aparecen todos ellos.
+        </p>
+      </section>
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
   </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+  
 </body>
 
 </html>
